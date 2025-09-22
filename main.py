@@ -14,7 +14,7 @@ fenetre.geometry("1000x1200")  # Taille personnalisée
 fenetre.configure(bg="#F5F0E6")  # Couleur de fond douce
 
 
-#Recupérations
+"""#Recupérations
 # Ajout des images aux boutons
 icone_calc = PhotoImage(file="Image/Calc.png")
 icone_cible = PhotoImage(file="Image/defi.png")
@@ -37,7 +37,7 @@ icone_balance = resize_image(icone_balance)
 icone_th = resize_image(icone_th)
 icone_poly = resize_image(icone_poly)
 icone_carac = resize_image(icone_carac)
-icone_exit = resize_image(icone_exit)
+icone_exit = resize_image(icone_exit)"""
 
 # Configuration du style pour les boutons
 style = ttk.Style()
@@ -103,7 +103,7 @@ labels.pack(pady=20)
 
 # Instruction
 label2 = Label(
-    fenetre,
+    scrollable_frame,
     text="Choisis ton opération !",
     fg="black",
     bg="#F5F0E6",
@@ -122,7 +122,6 @@ bouton1 = ttk.Button(
     style="Custom.TButton",
     compound=LEFT,
     command=op.launch_operation,
-    image=icone_calc
 )
 
 bouton2 = ttk.Button(
@@ -131,7 +130,6 @@ bouton2 = ttk.Button(
     style="Custom.TButton",
     compound=LEFT,
     command=theorie.lancer_theorie,
-    image=icone_th
 )
 
 bouton3 = ttk.Button(
@@ -139,8 +137,7 @@ bouton3 = ttk.Button(
     text="Module 3 : Conversion",
     style="Custom.TButton",
     compound=LEFT,
-    command=conv.launch_conversion,
-    image=icone_balance
+    command=conv.launch_conversion
 )
 
 bouton4 = ttk.Button(
@@ -148,7 +145,6 @@ bouton4 = ttk.Button(
     text="Module 4 : Explorateur de Concepts",
     style="Custom.TButton",
     compound=LEFT,
-    image=icone_cible
 )
 
 
@@ -157,16 +153,14 @@ bouton6 = ttk.Button(
     text="Module 5 : Polynomes & Equations",
     style="Custom.TButton",
     compound=LEFT,
-    command=poly.lancer_polynome,
-    image=icone_poly)
+    command=poly.lancer_polynome)
 
 bouton8 = ttk.Button(
     scrollable_frame,
     text="Module 6 : Opération sur les chaines de caractère",
     style="Custom.TButton",
     compound=LEFT,
-    command = ch.lancer_chaine,
-    image=icone_carac
+    command = ch.lancer_chaine
 )
 
 

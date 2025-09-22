@@ -591,3 +591,6 @@ def intSimpsonC(f, a, b, n):
 def intSimpsonC(f, a, b, n):
     h = (b - a)
     return (f(a)+f(b)+4*f(a+b))
+
+
+
