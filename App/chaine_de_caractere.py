@@ -11,8 +11,8 @@ def configurer_style():
                     relief="flat")
     return style
 
-def lancer_compt_voy():
-    page = Toplevel()
+def lancer_compt_voy(parent):
+    page = Toplevel(parent)
     page.configure(bg="#F5F0E6")
     page.geometry("600x500")
     page.title("Compteur de voyelles")

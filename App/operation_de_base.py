@@ -4,8 +4,8 @@ from tkinter import ttk
 import re
 
 
-def launch_operation():
-    operation = Toplevel()
+def launch_operation(parent=None):
+    operation = Toplevel(parent)
     operation.title("Calculatrice de base")
     operation.geometry("500x550")
     operation.configure(bg="#F5F0E6")

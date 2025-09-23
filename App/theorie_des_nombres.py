@@ -309,8 +309,8 @@ def lancer_nombre_catalan():
 
 
 # Fonction principale pour lancer le module "Théorie des nombres"
-def lancer_theorie():
-    th = Toplevel()  # Création de la fenêtre principale
+def lancer_theorie(parent=None):
+    th = Toplevel(parent)  # Création de la fenêtre principale
     th.title("Théorie des nombres")  # Titre
     th.configure(bg="#F5F0E6")  # Couleur de fond
     th.geometry("500x700")  # Taille de la fenêtre

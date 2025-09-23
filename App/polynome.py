@@ -110,8 +110,8 @@ def lancer_polynome2():
     button.pack(pady=20)
 
 # ------------------ Menu principal ------------------
-def lancer_polynome():
-    fenetre_polynome = Toplevel()
+def lancer_polynome(parent = None):
+    fenetre_polynome = Toplevel(parent)
     fenetre_polynome.configure(bg="#F5F0E6")
     fenetre_polynome.title("Polynome")
     fenetre_polynome.geometry("500x700")

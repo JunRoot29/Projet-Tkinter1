@@ -153,8 +153,8 @@ style.configure("Rounded.TButton",
                 relief="flat",
                 width=40)
 
-def launch_conversion():
-    conversion = Toplevel()
+def launch_conversion(parent=None):
+    conversion = Toplevel(parent)
     conversion.title("Conversion")
     conversion.geometry("600x700")
     conversion.configure(bg="#F5F0E6")

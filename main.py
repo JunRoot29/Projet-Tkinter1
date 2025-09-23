@@ -14,31 +14,6 @@ fenetre.geometry("1000x1200")  # Taille personnalisée
 fenetre.configure(bg="#F5F0E6")  # Couleur de fond douce
 
 
-"""#Recupérations
-# Ajout des images aux boutons
-icone_calc = PhotoImage(file="Image/Calc.png")
-icone_cible = PhotoImage(file="Image/defi.png")
-icone_integral = PhotoImage(file="Image/integral.png")
-icone_balance = PhotoImage(file="Image/balance.png")
-icone_th = PhotoImage(file="Image/th.png")
-icone_poly = PhotoImage(file="Image/poly.png")
-icone_carac = PhotoImage(file="Image/carac.png")
-icone_exit = PhotoImage(file="Image/exit.png")
-
-
-def resize_image(image, size=(30, 30)):
-    return image.subsample(max(1, image.width() // size[0]), max(1, image.height() // size[1]))
-
-# Redimensionner toutes les icônes
-icone_calc = resize_image(icone_calc)
-icone_cible = resize_image(icone_cible)
-icone_equerre = resize_image(icone_integral)
-icone_balance = resize_image(icone_balance)
-icone_th = resize_image(icone_th)
-icone_poly = resize_image(icone_poly)
-icone_carac = resize_image(icone_carac)
-icone_exit = resize_image(icone_exit)"""
-
 # Configuration du style pour les boutons
 style = ttk.Style()
 style.configure("Custom.TButton",
@@ -111,9 +86,6 @@ label2 = Label(
     justify="center"
 )
 label2.pack(pady=10)
-# Cadre pour contenir les boutons avec défilement si nécessaire
-frame = Frame(scrollable_frame, bg="#F5F0E6")
-frame.pack(pady=10, padx=20, fill=BOTH, expand=True)
 
 # Boutons pour les Modules
 bouton1 = ttk.Button(
