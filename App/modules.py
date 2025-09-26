@@ -540,7 +540,7 @@ def racinePointFixe(g,x0,epsilon):
 def intRectangleRetro(f,a,b,n):
     h = (b-a)/n
     somme = 0
-    for i in range(n-1):
+    for i in range(n):
         somme += f(a + i*h)
     return somme*h
 

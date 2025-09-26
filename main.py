@@ -1,11 +1,11 @@
 from tkinter import *
 from tkinter import ttk
-from PIL import Image, ImageTk
 from App import polynome as poly
 from App import operation_de_base as op
 from App import theorie_des_nombres as theorie
 from App import conversion as conv
 from App import chaine_de_caractere as ch
+from App import integration_numerique as int_num
 
 # Fenetre principal
 fenetre = Tk()
@@ -15,7 +15,7 @@ fenetre.configure(bg="#F5F0E6")  # Couleur de fond douce
 
 
 # Configuration du style pour les boutons
-style = ttk.Style()
+style = ttk.Style(fenetre)
 style.configure("Custom.TButton",
                 foreground="#3C3C3C",
                 background="#C7C3BB",
@@ -135,8 +135,15 @@ bouton8 = ttk.Button(
     command = ch.lancer_chaine
 )
 
+bouton9 = ttk.Button(
+    scrollable_frame,
+    text="Module 7 : Intégration Numérique",
+    style="Custom.TButton",
+    compound=LEFT,
+    command=int_num.lancer_integration_numerique
+)
 
-bouton9= ttk.Button(
+bouton10= ttk.Button(
     scrollable_frame,
     text="Quitter",
     style="Custom.TButton",
@@ -152,5 +159,6 @@ bouton4.pack(pady=10, fill=X)
 bouton6.pack(pady=10, fill=X)
 bouton8.pack(pady=10, fill=X)
 bouton9.pack(pady=10, fill=X)
+bouton10.pack(pady=10, fill=X)
 
 fenetre.mainloop()
