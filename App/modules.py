@@ -12,6 +12,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 from functools import lru_cache
+import re
 
 
 #Opérations arithmétiques de bases
@@ -532,65 +533,98 @@ def racinePointFixe(g,x0,epsilon):
         i += 1
     return (x0,i)
 
-#Intégration numérique
-#======================================================================================
-
-#Méthode des rectangles
-#Rectangle Retrograde
-def intRectangleRetro(f,a,b,n):
-    h = (b-a)/n
-    somme = 0
-    for i in range(n):
-        somme += f(a + i*h)
-    return somme*h
-
-#Rectangle Progressif
-def intRectanglePro(f,a,b,n):
-    somme = 0
-    h = (b-a)/n
-    for i in range(n+1):
-        somme += f(a+i*h)
-    return somme*h
-
-#Rectangle Centré
-def intRectangleCentre(f,a,b,n):
-    h = (b-a)/n
-    somme = 0
-    for i in range(n-1):
-        somme += f((a+i*h + (h/2)))
-    return somme*h
-
-#Méthode des trapèzes
-#Trapèze Composite
-def intTrapezeC(f, a, b, n):
+def intRectangleRetro(f, a, b, n):
+    """Méthode des rectangles rétrograde"""
     h = (b - a) / n
     somme = 0
-    for i in range(1, n): 
+    for i in range(n):
+        somme += f(a + i * h)
+    return somme * h
+
+def intRectanglePro(f, a, b, n):
+    """Méthode des rectangles progressive"""
+    h = (b - a) / n
+    somme = 0
+    for i in range(1, n + 1):
+        somme += f(a + i * h)
+    return somme * h
+
+def intRectangleCentre(f, a, b, n):
+    """Méthode des rectangles centrée"""
+    h = (b - a) / n
+    somme = 0
+    for i in range(n):
+        somme += f(a + i * h + h / 2)
+    return somme * h
+
+def intTrapezeC(f, a, b, n):
+    """Méthode des trapèzes composite"""
+    h = (b - a) / n
+    somme = 0
+    for i in range(1, n):
         somme += f(a + i * h)
     return (h / 2) * (f(a) + f(b) + 2 * somme)
 
-#Trapèze Simple
 def intTrapezeS(f, a, b, n):
+    """Méthode des trapèzes simple"""
     h = (b - a)
     return (h / 2) * (f(a) + f(b))
 
-#Méthode de Simpson
-#Simpson Composite
 def intSimpsonC(f, a, b, n):
+    """Méthode de Simpson composite"""
+    if n % 2 != 0:
+        n += 1
     h = (b - a) / n
-    somme1 = 0
-    somme2 = 0
-    for i in range(0, n):
-        somme1 += f((a+i*h + (h/2)))
+    somme_pairs = 0
+    somme_impairs = 0
+    
+    for i in range(1, n, 2):
+        somme_impairs += f(a + i * h)
+    
+    for i in range(2, n - 1, 2):
+        somme_pairs += f(a + i * h)
+    
+    return (h / 3) * (f(a) + f(b) + 4 * somme_impairs + 2 * somme_pairs)
 
-    for j in range(1, n):
-        somme2 +=  f(a + j * h)
-    return (h / 6) * (f(a) + f(b) + 4 * somme1 + 2 * somme2)
+def intSimpsonS(f, a, b, n):
+    """Méthode de Simpson simple"""
+    h = (b - a) / 2
+    milieu = (a + b) / 2
+    return (h / 3) * (f(a) + 4 * f(milieu) + f(b))
 
-#Simpson Simple
-def intSimpsonC(f, a, b, n):
-    h = (b - a)
-    return (f(a)+f(b)+4*f(a+b))
+def prepare_expression(expr: str) -> str:
+    """Prépare l'expression mathématique pour évaluation"""
+    expr = expr.replace(" ", "")
+    
+    # Valeur absolue
+    while "|" in expr:
+        debut = expr.find("|")
+        fin = expr.find("|", debut + 1)
+        if fin == -1:
+            expr = expr.replace("|", "", 1)
+        else:
+            contenu = expr[debut + 1:fin]
+            expr = expr[:debut] + f"abs({contenu})" + expr[fin + 1:]
+    
+    # Multiplication implicite
+    expr = re.sub(r"(\d)(π)", r"\1*π", expr)
+    expr = re.sub(r"(\d)(√)", r"\1*√", expr)
+    expr = re.sub(r"(\d)([a-zA-Z])", r"\1*\2", expr)
+    
+    # Remplacements
+    expr = expr.replace("π", "pi")
+    expr = expr.replace("√", "sqrt")
+    expr = expr.replace("^", "**")
+    expr = expr.replace("%", "/100")
+    expr = re.sub(r"(\d+)!", r"factorial(\1)", expr)
+    
+    return expr
 
-
-
+def equilibrer_parentheses(expr: str) -> str:
+    """Équilibre les parenthèses"""
+    ouvert = expr.count("(")
+    ferme = expr.count(")")
+    manque = ouvert - ferme
+    if manque > 0:
+        expr += ")" * manque
+    return expr
