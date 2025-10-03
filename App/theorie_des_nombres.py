@@ -13,7 +13,7 @@ def configurer_style():
     style.configure("Rounded.TButton",
                     foreground="#3C3C3C",  
                     background="#C7C3BB",  
-                    font=("Poppins", 14),  
+                    font=("Century Gothic", 14),  
                     padding=(20, 10),  # Uniformiser le padding
                     relief="flat",
                     width=60)  # Définir une largeur uniforme
@@ -27,17 +27,17 @@ def lancer_nombre_parfait():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x500")  # Taille de la fenêtre
 
-    label = Label(nbr, text="VERIFICATION NOMBRE PARFAIT", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="VERIFICATION NOMBRE PARFAIT", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
-    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox    
-    entre = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre.pack(pady=10)
 
     # Fonction de test
@@ -58,7 +58,7 @@ def lancer_nombre_parfait():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Tester", command=test_parfait)
     bouton1.pack(pady=10) 
     
-    label2 = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -72,17 +72,17 @@ def lancer_nombre_distinct():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x500")  # Taille de la fenêtre
     
-    label = Label(nbr, text="VERIFICATION NOMBRE DISTINCT", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="VERIFICATION NOMBRE DISTINCT", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
-    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox    
-    entre = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre.pack(pady=10)
 
     # Fonction de test
@@ -103,7 +103,7 @@ def lancer_nombre_distinct():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Tester", command=test_distinct)
     bouton1.pack(pady=10) 
     
-    label2 = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -116,17 +116,17 @@ def lancer_nombre_premier():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x500")  # Taille de la fenêtre
     
-    label = Label(nbr, text="TEST DE PRIMALITÉ (Nombre Premier)", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="TEST DE PRIMALITÉ (Nombre Premier)", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
-    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le nombre à tester", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox    
-    entre = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre.pack(pady=10)
 
     # Fonction de test
@@ -147,7 +147,7 @@ def lancer_nombre_premier():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Tester", command=test_premier)
     bouton1.pack(pady=10) 
     
-    label2 = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -161,25 +161,25 @@ def lancer_pgcd():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x550")  # Taille de la fenêtre
 
-    label = Label(nbr, text="CALCUL PGCD", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="CALCUL PGCD", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
     # Saisie du premier nombre par l'utilisateur
-    label1 = Label(nbr, text="Entrez le premier nombre", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le premier nombre", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox nombre 1   
-    entre1 = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre1 = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
     # Saisie du deuxième nombre par l'utilisateur
-    label2 = Label(nbr, text="Entrez le deuxième nombre", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Entrez le deuxième nombre", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
     
-    entre2 = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre2 = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre2.pack(pady=10)
 
     # Fonction de test
@@ -202,7 +202,7 @@ def lancer_pgcd():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Calculer", command=test_pgcd)
     bouton1.pack(pady=10) 
     
-    label_resultat = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label_resultat = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label_resultat.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -216,25 +216,25 @@ def lancer_ppcm():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x550")  # Taille de la fenêtre
 
-    label = Label(nbr, text="CALCUL PPCM", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="CALCUL PPCM", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
     # Saisie du premier nombre par l'utilisateur
-    label1 = Label(nbr, text="Entrez le premier nombre", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le premier nombre", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox nombre 1   
-    entre1 = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre1 = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
     # Saisie du deuxième nombre par l'utilisateur
-    label2 = Label(nbr, text="Entrez le deuxième nombre", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Entrez le deuxième nombre", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
     
-    entre2 = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre2 = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre2.pack(pady=10)
 
     # Fonction de test
@@ -257,7 +257,7 @@ def lancer_ppcm():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Calculer", command=test_ppcm)
     bouton1.pack(pady=10) 
     
-    label_resultat = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label_resultat = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label_resultat.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -270,17 +270,17 @@ def lancer_nombre_catalan():
     nbr.configure(bg="#F5F0E6")  # Couleur de fond
     nbr.geometry("600x500")  # Taille de la fenêtre
 
-    label = Label(nbr, text="CALCUL DU NOMBRE CATALAN", font=("Poppins", 16), bg="#F5F0E6")
+    label = Label(nbr, text="CALCUL DU NOMBRE CATALAN", font=("Century Gothic", 16), bg="#F5F0E6")
     label.pack(pady=20)
 
-    label1 = Label(nbr, text="Entrez le nombre", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(nbr, text="Entrez le nombre", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
     # Configuration du style
     style = configurer_style()
     
     # Textbox    
-    entre = Text(nbr, height=2, width=40, font=("Poppins", 12))
+    entre = Text(nbr, height=2, width=40, font=("Century Gothic", 12))
     entre.pack(pady=10)
 
     # Fonction de test
@@ -301,7 +301,7 @@ def lancer_nombre_catalan():
     bouton1 = ttk.Button(nbr, style="Rounded.TButton", text="Calculer", command=test_catalan)
     bouton1.pack(pady=10) 
     
-    label2 = Label(nbr, text="Résultat : ", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(nbr, text="Résultat : ", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
     bouton2 = ttk.Button(nbr, style="Rounded.TButton", text="Remise à blanc", command=remise_a_blanc)
@@ -316,7 +316,7 @@ def lancer_theorie(parent=None):
     th.geometry("500x700")  # Taille de la fenêtre
 
     # Label d'introduction
-    label1 = Label(th, text="Choisissez votre test", font=("Poppins", 16, "bold"), bg="#F5F0E6")
+    label1 = Label(th, text="Choisissez votre test", font=("Century Gothic", 16, "bold"), bg="#F5F0E6")
     label1.pack(pady=20)
 
     # Configuration du style

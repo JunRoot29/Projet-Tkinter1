@@ -19,7 +19,7 @@ style = ttk.Style(fenetre)
 style.configure("Custom.TButton",
                 foreground="#3C3C3C",
                 background="#C7C3BB",
-                font=("Poppins", 14),
+                font=("Century Gothic", 14),
                 padding=15,
                 relief="flat",
                 width=40)  # Largeur uniforme pour tous les boutons
@@ -61,7 +61,7 @@ canvas.bind_all("<MouseWheel>", _on_mouse_wheel)
 label1 = Label(
     scrollable_frame,
     text="MathCrafts",
-    font=("Poppins", 24, "bold"),
+    font=("Century Gothic", 24, "bold"),
     fg="#2C3E50",
     bg="#F5F0E6"
 )
@@ -70,7 +70,7 @@ label1.pack()
 labels = Label(
     scrollable_frame,
     text="Un espace malin, Calculer et s'amuser avec les maths. 🧠✨",
-    font=("Poppins", 14),
+    font=("Century Gothic", 14),
     fg="#2C3E50",
     bg="#F5F0E6"
 )
@@ -82,7 +82,7 @@ label2 = Label(
     text="Choisis ton opération !",
     fg="black",
     bg="#F5F0E6",
-    font=("Poppins", 14),
+    font=("Century Gothic", 14),
     justify="center"
 )
 label2.pack(pady=10)

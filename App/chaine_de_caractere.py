@@ -7,7 +7,7 @@ def configurer_style():
     style.configure("Rounded.TButton",
                     foreground="#3C3C3C",
                     background="#C7C3BB",
-                    font=("Poppins", 14),
+                    font=("Century Gothic", 14),
                     relief="flat")
     return style
 
@@ -18,13 +18,13 @@ def lancer_compt_voy(parent):
     page.title("Compteur de voyelles")
     style = configurer_style()
 
-    label1 = Label(page, text="Entrez votre texte !", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(page, text="Entrez votre texte !", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
-    entre1 = Text(page, height=10, width=60, font=("Poppins", 12))
+    entre1 = Text(page, height=10, width=60, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
-    result_label = Label(page, text="Résultat :", font=("Poppins", 14), bg="#F5F0E6")
+    result_label = Label(page, text="Résultat :", font=("Century Gothic", 14), bg="#F5F0E6")
     result_label.pack(pady=10)
 
     def test_voyelle():
@@ -49,19 +49,19 @@ def lancer_compt_lettre():
     style = configurer_style()
 
     label1 = Label(page, text="Entrez votre texte \nCette Interface trouve les lettres, pas les mots !", 
-                  font=("Poppins", 14), bg="#F5F0E6")
+                  font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
-    entre1 = Text(page, height=10, width=60, font=("Poppins", 12))
+    entre1 = Text(page, height=10, width=60, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
-    label2 = Label(page, text="Entrez la lettre à compter", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(page, text="Entrez la lettre à compter", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
-    entre2 = Text(page, height=1, width=10, font=("Poppins", 12))
+    entre2 = Text(page, height=1, width=10, font=("Century Gothic", 12))
     entre2.pack(pady=10)
 
-    result_label = Label(page, text="Résultat :", font=("Poppins", 14), bg="#F5F0E6")
+    result_label = Label(page, text="Résultat :", font=("Century Gothic", 14), bg="#F5F0E6")
     result_label.pack(pady=10)
 
     def test_lettre():
@@ -93,19 +93,19 @@ def lancer_rech_mot():
     style = configurer_style()
 
     label1 = Label(page, text="Entrez votre texte \nCette Interface trouve le mot à rechercher, pas les lettres !", 
-                  font=("Poppins", 14), bg="#F5F0E6")
+                  font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
-    entre1 = Text(page, height=10, width=60, font=("Poppins", 12))
+    entre1 = Text(page, height=10, width=60, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
-    label2 = Label(page, text="Entrez le mot à compter", font=("Poppins", 14), bg="#F5F0E6")
+    label2 = Label(page, text="Entrez le mot à compter", font=("Century Gothic", 14), bg="#F5F0E6")
     label2.pack(pady=10)
 
-    entre2 = Text(page, height=1, width=20, font=("Poppins", 12))
+    entre2 = Text(page, height=1, width=20, font=("Century Gothic", 12))
     entre2.pack(pady=10)
 
-    result_label = Label(page, text="Résultat :", font=("Poppins", 14), bg="#F5F0E6")
+    result_label = Label(page, text="Résultat :", font=("Century Gothic", 14), bg="#F5F0E6")
     result_label.pack(pady=10)
 
     def test_mot():
@@ -132,13 +132,13 @@ def lancer_palindrome():
     page.title("Palindrome")
     style = configurer_style()
 
-    label1 = Label(page, text="Entrez votre mot !", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(page, text="Entrez votre mot !", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=10)
 
-    entre1 = Text(page, height=10, width=60, font=("Poppins", 12))
+    entre1 = Text(page, height=10, width=60, font=("Century Gothic", 12))
     entre1.pack(pady=10)
 
-    result_label = Label(page, text="Résultat :", font=("Poppins", 14), bg="#F5F0E6")
+    result_label = Label(page, text="Résultat :", font=("Century Gothic", 14), bg="#F5F0E6")
     result_label.pack(pady=10)
 
     def test_palindrome():
@@ -166,7 +166,7 @@ def lancer_chaine():
     frame_boutons.pack(pady=10, padx=20, fill=BOTH, expand=True)
 
     # Placer le label dans le frame
-    label1 = Label(frame_boutons, text="Choisissez une opération", font=("Poppins", 14), bg="#F5F0E6")
+    label1 = Label(frame_boutons, text="Choisissez une opération", font=("Century Gothic", 14), bg="#F5F0E6")
     label1.pack(pady=20)
 
     style = configurer_style()

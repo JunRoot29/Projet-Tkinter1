@@ -9,23 +9,23 @@ def launch_operation(parent=None):
     operation.title("Calculatrice de base")
     operation.geometry("500x550")
     operation.configure(bg="#F5F0E6")
-    label3 = Label(operation,font=("Poppins",14))
+    label3 = Label(operation,font=("Century Gothic",14))
 
     def configurer_style():
         style = ttk.Style()
         style.configure("Rounded.TButton",
                         foreground="#3C3C3C",
                         background="#B4B0A6",
-                        font=("Poppins", 10),
+                        font=("Century Gothic", 10),
                         padding=(2, 2))
         return style
 
     style = configurer_style()
-    label1 = Label(operation, text="Calculatrice de base", bg="#F5F0E6", font=("Poppins", 14))
+    label1 = Label(operation, text="Calculatrice de base", bg="#F5F0E6", font=("Century Gothic", 14))
     label1.pack(pady=5)
 
     # Création du champ verrouillé
-    entree = Text(operation, height=2, width=40, font=("Poppins", 10), state=DISABLED)
+    entree = Text(operation, height=2, width=40, font=("Century Gothic", 10), state=DISABLED)
     entree.pack(pady=10)
     label3.pack(pady=10)
     # Blocage total des interactions utilisateur

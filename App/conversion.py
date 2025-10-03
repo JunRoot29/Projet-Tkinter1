@@ -148,7 +148,7 @@ style = ttk.Style()
 style.configure("Rounded.TButton",
                 foreground="#3C3C3C",
                 background="#C7C3BB",
-                font=("Poppins", 14),
+                font=("Century Gothic", 14),
                 padding=15,
                 relief="flat",
                 width=40)
@@ -159,11 +159,11 @@ def launch_conversion(parent=None):
     conversion.geometry("600x700")
     conversion.configure(bg="#F5F0E6")
 
-    Label(conversion, text="Conversion", font=("Poppins", 24, "bold")).pack()
-    Label(conversion, text="Et si on s'amusait à convertir ? \n Choisi ton Opération!", font=("Poppins", 14)).pack()
+    Label(conversion, text="Conversion", font=("Century Gothic", 24, "bold")).pack()
+    Label(conversion, text="Et si on s'amusait à convertir ? \n Choisi ton Opération!", font=("Century Gothic", 14)).pack()
 
     options = ["Longueur 📏", "Masse et Poids 🏋️", "Température🌡️", "Vitesse 🏃🏾", "Angles 📐", "Données 🖲️"]
-    combo = ttk.Combobox(conversion, values=options, font=("Poppins", 14), state="readonly")
+    combo = ttk.Combobox(conversion, values=options, font=("Century Gothic", 14), state="readonly")
     combo.set("Longueur 📏")
     combo.pack()
 
@@ -203,21 +203,21 @@ def launch_conversion(parent=None):
         cadre_longueur = Frame(conversion, bg="#F5F0E6")
         cadre_longueur.pack(pady=10)
 
-        Label(cadre_longueur, text="Valeur à convertir :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        champ_valeur = Entry(cadre_longueur, font=("Poppins", 14), textvariable=champ_valeur_var)
+        Label(cadre_longueur, text="Valeur à convertir :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        champ_valeur = Entry(cadre_longueur, font=("Century Gothic", 14), textvariable=champ_valeur_var)
         champ_valeur.pack()
 
-        Label(cadre_longueur, text="De :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_depart = ttk.Combobox(cadre_longueur, values=list(unit_to_meter.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_longueur, text="De :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_depart = ttk.Combobox(cadre_longueur, values=list(unit_to_meter.keys()), font=("Century Gothic", 12), state="readonly")
         unite_depart.set("Mètre")
         unite_depart.pack()
 
-        Label(cadre_longueur, text="Vers :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_arrivee = ttk.Combobox(cadre_longueur, values=list(unit_to_meter.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_longueur, text="Vers :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_arrivee = ttk.Combobox(cadre_longueur, values=list(unit_to_meter.keys()), font=("Century Gothic", 12), state="readonly")
         unite_arrivee.set("Kilomètre")
         unite_arrivee.pack()
 
-        champ_resultat = Label(cadre_longueur, text="", font=("Poppins", 14), bg="#F5F0E6")
+        champ_resultat = Label(cadre_longueur, text="", font=("Century Gothic", 14), bg="#F5F0E6")
         champ_resultat.pack(pady=10)
 
         def calculer():
@@ -238,21 +238,21 @@ def launch_conversion(parent=None):
         cadre_vitesse = Frame(conversion, bg="#F5F0E6")
         cadre_vitesse.pack(pady=10)
 
-        Label(cadre_vitesse, text="Valeur à convertir :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        champ_valeur = Entry(cadre_vitesse, font=("Poppins", 14), textvariable=champ_valeur_var)
+        Label(cadre_vitesse, text="Valeur à convertir :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        champ_valeur = Entry(cadre_vitesse, font=("Century Gothic", 14), textvariable=champ_valeur_var)
         champ_valeur.pack()
 
-        Label(cadre_vitesse, text="De :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_depart = ttk.Combobox(cadre_vitesse, values=list(unit_to_vitesse.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_vitesse, text="De :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_depart = ttk.Combobox(cadre_vitesse, values=list(unit_to_vitesse.keys()), font=("Century Gothic", 12), state="readonly")
         unite_depart.set("Kilomètre par heure")
         unite_depart.pack()
 
-        Label(cadre_vitesse, text="Vers :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_arrivee = ttk.Combobox(cadre_vitesse, values=list(unit_to_vitesse.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_vitesse, text="Vers :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_arrivee = ttk.Combobox(cadre_vitesse, values=list(unit_to_vitesse.keys()), font=("Century Gothic", 12), state="readonly")
         unite_arrivee.set("Kilomètre par seconde")
         unite_arrivee.pack()
 
-        champ_resultat = Label(cadre_vitesse, text="", font=("Poppins", 14), bg="#F5F0E6")
+        champ_resultat = Label(cadre_vitesse, text="", font=("Century Gothic", 14), bg="#F5F0E6")
         champ_resultat.pack(pady=10)
 
         def calculer():
@@ -278,21 +278,21 @@ def launch_conversion(parent=None):
         cadre_masse = Frame(conversion, bg="#F5F0E6")
         cadre_masse.pack(pady=10)
 
-        Label(cadre_masse, text="Valeur à convertir :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        champ_valeur = Entry(cadre_masse, font=("Poppins", 14), textvariable=champ_valeur_var)
+        Label(cadre_masse, text="Valeur à convertir :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        champ_valeur = Entry(cadre_masse, font=("Century Gothic", 14), textvariable=champ_valeur_var)
         champ_valeur.pack()
 
-        Label(cadre_masse, text="De :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_depart = ttk.Combobox(cadre_masse, values=list(unit_to_masse_et_poids.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_masse, text="De :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_depart = ttk.Combobox(cadre_masse, values=list(unit_to_masse_et_poids.keys()), font=("Century Gothic", 12), state="readonly")
         unite_depart.set("Gramme")
         unite_depart.pack()
 
-        Label(cadre_masse, text="Vers :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_arrivee = ttk.Combobox(cadre_masse, values=list(unit_to_masse_et_poids.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_masse, text="Vers :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_arrivee = ttk.Combobox(cadre_masse, values=list(unit_to_masse_et_poids.keys()), font=("Century Gothic", 12), state="readonly")
         unite_arrivee.set("Kilogramme")
         unite_arrivee.pack()
 
-        champ_resultat = Label(cadre_masse, text="", font=("Poppins", 14), bg="#F5F0E6")
+        champ_resultat = Label(cadre_masse, text="", font=("Century Gothic", 14), bg="#F5F0E6")
         champ_resultat.pack(pady=10)
 
         def calculer():
@@ -313,21 +313,21 @@ def launch_conversion(parent=None):
         cadre_temperature = Frame(conversion, bg="#F5F0E6")
         cadre_temperature.pack(pady=10)
 
-        Label(cadre_temperature, text="Valeur à convertir :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        champ_valeur = Entry(cadre_temperature, font=("Poppins", 14), textvariable=champ_valeur_var)
+        Label(cadre_temperature, text="Valeur à convertir :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        champ_valeur = Entry(cadre_temperature, font=("Century Gothic", 14), textvariable=champ_valeur_var)
         champ_valeur.pack()
 
-        Label(cadre_temperature, text="De :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_depart = ttk.Combobox(cadre_temperature, values=list(unit_to_temperature.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_temperature, text="De :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_depart = ttk.Combobox(cadre_temperature, values=list(unit_to_temperature.keys()), font=("Century Gothic", 12), state="readonly")
         unite_depart.set("Dégrés (°C)")
         unite_depart.pack()
 
-        Label(cadre_temperature, text="Vers :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_arrivee = ttk.Combobox(cadre_temperature, values=list(unit_to_temperature.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_temperature, text="Vers :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_arrivee = ttk.Combobox(cadre_temperature, values=list(unit_to_temperature.keys()), font=("Century Gothic", 12), state="readonly")
         unite_arrivee.set("Fahrenheit (°F)")
         unite_arrivee.pack()
 
-        champ_resultat = Label(cadre_temperature, text="", font=("Poppins", 14), bg="#F5F0E6")
+        champ_resultat = Label(cadre_temperature, text="", font=("Century Gothic", 14), bg="#F5F0E6")
         champ_resultat.pack(pady=10)
 
         def calculer():
@@ -348,21 +348,21 @@ def launch_conversion(parent=None):
         cadre_angles = Frame(conversion, bg="#F5F0E6")
         cadre_angles.pack(pady=10)
 
-        Label(cadre_angles, text="Valeur à convertir :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        champ_valeur = Entry(cadre_angles, font=("Poppins", 14), textvariable=champ_valeur_var)
+        Label(cadre_angles, text="Valeur à convertir :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        champ_valeur = Entry(cadre_angles, font=("Century Gothic", 14), textvariable=champ_valeur_var)
         champ_valeur.pack()
 
-        Label(cadre_angles, text="De :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_depart = ttk.Combobox(cadre_angles, values=list(unit_to_angles.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_angles, text="De :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_depart = ttk.Combobox(cadre_angles, values=list(unit_to_angles.keys()), font=("Century Gothic", 12), state="readonly")
         unite_depart.set("Radian")
         unite_depart.pack()
 
-        Label(cadre_angles, text="Vers :", font=("Poppins", 14), bg="#F5F0E6").pack()
-        unite_arrivee = ttk.Combobox(cadre_angles, values=list(unit_to_angles.keys()), font=("Poppins", 12), state="readonly")
+        Label(cadre_angles, text="Vers :", font=("Century Gothic", 14), bg="#F5F0E6").pack()
+        unite_arrivee = ttk.Combobox(cadre_angles, values=list(unit_to_angles.keys()), font=("Century Gothic", 12), state="readonly")
         unite_arrivee.set("Degré")
         unite_arrivee.pack()
 
-        champ_resultat = Label(cadre_angles, text="", font=("Poppins", 14), bg="#F5F0E6")
+        champ_resultat = Label(cadre_angles, text="", font=("Century Gothic", 14), bg="#F5F0E6")
         champ_resultat.pack(pady=10)
 
         def calculer():

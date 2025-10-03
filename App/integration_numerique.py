@@ -72,7 +72,7 @@ def lancer_integration_numerique(parent=None):
     style.configure("Custom.TButton",
                     foreground="#3C3C3C",
                     background="#C7C3BB",
-                    font=("Poppins", 12),
+                    font=("Century Gothic", 12),
                     padding=8,
                     relief="flat")
     
@@ -81,12 +81,12 @@ def lancer_integration_numerique(parent=None):
     header_frame.pack(fill="x", pady=10)
     
     Label(header_frame, text="Intégration Numérique 📈",
-          font=("Poppins", 24, "bold"), fg="#2C3E50", bg="#F5F0E6").pack()
+          font=("Century Gothic", 24, "bold"), fg="#2C3E50", bg="#F5F0E6").pack()
     Label(header_frame, text="Choisissez une méthode d'intégration 😊",
-          font=("Poppins", 14), fg="#2C3E50", bg="#F5F0E6").pack()
+          font=("Century Gothic", 14), fg="#2C3E50", bg="#F5F0E6").pack()
     
     # Menu déroulant pour choisir la méthode d'intégration
-    combo = ttk.Combobox(header_frame, font=("Poppins", 14),
+    combo = ttk.Combobox(header_frame, font=("Century Gothic", 14),
                          values=donnees, state="readonly", width=30)
     combo.pack(pady=10)
     combo.set("=== Sélectionnez une méthode ===")
@@ -125,9 +125,9 @@ def lancer_integration_numerique(parent=None):
     
     # Section fonction
     Label(frame_contenu, text="Fonction à intégrer (ex: x**2, sin(x), cos(x)*x)",
-          font=("Poppins", 14), bg="#F5F0E6").pack(pady=5)
+          font=("Century Gothic", 14), bg="#F5F0E6").pack(pady=5)
     
-    entree_f = Entry(frame_contenu, font=("Poppins", 14), textvariable=var_f, width=40)
+    entree_f = Entry(frame_contenu, font=("Century Gothic", 14), textvariable=var_f, width=40)
     entree_f.pack(padx=20, pady=5)
     
     # Section paramètres
@@ -137,27 +137,27 @@ def lancer_integration_numerique(parent=None):
     # Paramètre a
     frame_a = Frame(frame_params, bg="#F5F0E6")
     frame_a.pack(pady=5)
-    Label(frame_a, text="Borne inférieure (a) :", font=("Poppins", 12), bg="#F5F0E6").pack(side="left")
-    entree_a = Entry(frame_a, font=("Poppins", 12), textvariable=var_a, width=15)
+    Label(frame_a, text="Borne inférieure (a) :", font=("Century Gothic", 12), bg="#F5F0E6").pack(side="left")
+    entree_a = Entry(frame_a, font=("Century Gothic", 12), textvariable=var_a, width=15)
     entree_a.pack(side="left", padx=10)
     
     # Paramètre b
     frame_b = Frame(frame_params, bg="#F5F0E6")
     frame_b.pack(pady=5)
-    Label(frame_b, text="Borne supérieure (b) :", font=("Poppins", 12), bg="#F5F0E6").pack(side="left")
-    entree_b = Entry(frame_b, font=("Poppins", 12), textvariable=var_b, width=15)
+    Label(frame_b, text="Borne supérieure (b) :", font=("Century Gothic", 12), bg="#F5F0E6").pack(side="left")
+    entree_b = Entry(frame_b, font=("Century Gothic", 12), textvariable=var_b, width=15)
     entree_b.pack(side="left", padx=10)
     
     # Paramètre n
     frame_n = Frame(frame_params, bg="#F5F0E6")
     frame_n.pack(pady=5)
-    Label(frame_n, text="Subdivisions (n) :", font=("Poppins", 12), bg="#F5F0E6").pack(side="left")
-    entree_n = Entry(frame_n, font=("Poppins", 12), textvariable=var_n, width=15)
+    Label(frame_n, text="Subdivisions (n) :", font=("Century Gothic", 12), bg="#F5F0E6").pack(side="left")
+    entree_n = Entry(frame_n, font=("Century Gothic", 12), textvariable=var_n, width=15)
     entree_n.pack(side="left", padx=10)
     
     # Boutons d'aide mathématique
     Label(frame_contenu, text="Raccourcis pour fonctions mathématiques",
-          font=("Poppins", 12, "bold"), bg="#F5F0E6").pack(pady=(20, 5))
+          font=("Century Gothic", 12, "bold"), bg="#F5F0E6").pack(pady=(20, 5))
     
     frame_boutons = Frame(frame_contenu, bg="#F5F0E6")
     frame_boutons.pack(pady=10)
@@ -225,7 +225,7 @@ def lancer_integration_numerique(parent=None):
     frame_resultat.pack(pady=20)
     
     resultat_label = Label(frame_resultat, text="Résultat apparaîtra ici",
-                          font=("Poppins", 14, "bold"), fg="#2C3E50", bg="#F5F0E6")
+                          font=("Century Gothic", 14, "bold"), fg="#2C3E50", bg="#F5F0E6")
     resultat_label.pack()
     
     # Fonctions utilitaires
@@ -351,16 +351,16 @@ def lancer_integration_numerique(parent=None):
     frame_exemples.pack(pady=10)
     
     Label(frame_exemples, text="💡 Exemples de fonctions :",
-          font=("Poppins", 12, "bold"), bg="#F5F0E6").pack()
+          font=("Century Gothic", 12, "bold"), bg="#F5F0E6").pack()
     Label(frame_exemples, text="x**2 + 3*x + 1    |    sin(x)    |    cos(x)*exp(x)    |    sqrt(x)",
-          font=("Poppins", 10), fg="#666666", bg="#F5F0E6").pack()
+          font=("Century Gothic", 10), fg="#666666", bg="#F5F0E6").pack()
     
     # Informations supplémentaires pour tester le défilement
     frame_info = Frame(frame_contenu, bg="#F5F0E6")
     frame_info.pack(pady=20)
     
     Label(frame_info, text="ℹ️ Informations sur les méthodes :",
-          font=("Poppins", 12, "bold"), bg="#F5F0E6").pack()
+          font=("Century Gothic", 12, "bold"), bg="#F5F0E6").pack()
     
     methodes_info = [
         "• Rectangle Rétrograde : Utilise le côté gauche de chaque intervalle",
@@ -373,7 +373,7 @@ def lancer_integration_numerique(parent=None):
     ]
     
     for info in methodes_info:
-        Label(frame_info, text=info, font=("Poppins", 10), 
+        Label(frame_info, text=info, font=("Century Gothic", 10), 
               bg="#F5F0E6", fg="#666666", anchor="w").pack(fill="x", padx=20, pady=2)
     
     # Conseils d'utilisation
@@ -381,7 +381,7 @@ def lancer_integration_numerique(parent=None):
     frame_conseils.pack(pady=20)
     
     Label(frame_conseils, text="💡 Conseils d'utilisation :",
-          font=("Poppins", 12, "bold"), bg="#F5F0E6").pack()
+          font=("Century Gothic", 12, "bold"), bg="#F5F0E6").pack()
     
     conseils = [
         "• Augmentez n pour plus de précision",
@@ -392,7 +392,7 @@ def lancer_integration_numerique(parent=None):
     ]
     
     for conseil in conseils:
-        Label(frame_conseils, text=conseil, font=("Poppins", 10),
+        Label(frame_conseils, text=conseil, font=("Century Gothic", 10),
               bg="#F5F0E6", fg="#666666", anchor="w").pack(fill="x", padx=20, pady=2)
     
     # Espaceur final pour le défilement
